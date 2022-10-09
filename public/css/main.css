@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i');
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 body, html{
     font-size: 16px;
@@ -8,12 +8,13 @@ body, html{
     height: 100%;
     width: 100%;
     max-width: 100%;
-    font-family: 'roboto', sans-serif;
+    font-family: 'roboto', Arial, Helvetica, sans-serif;
+
 }
 .c-hero {
     width: 100%;
     min-height: 10rem;
-    background-image: url('https://www.freewebheaders.com/wp-content/uploads/colorful-modern-artistic-abstract-vector-hero-header-1920x1080-e1561055870332.jpg');
+    background-image: url('../images/placeholder_hero.png');
     background-size: cover;
 }
 
@@ -35,7 +36,6 @@ body, html{
 
 .c-hero__slogan {
     font-size: 3rem;
-    color: #ffffff;
 }
 
 .c-hero__avatar-area {
@@ -93,35 +93,82 @@ body, html{
     width: 100%;
     min-height: 10rem;
 }
-
-.c-gallery {
-    margin: 2rem 0;
+.c-gallery-container {
     display: grid;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+.c-gallery-card {
+    border-radius: 1.5rem;
+    color: #fff;
+    overflow: hidden;
+}
+.c-gallery-card--header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2c2c2c;
+}
+.c-gallery-card--body {
+    background-color: #2c2c2c;
+}
+.c-gallery {
+    display: grid;
+    grid-template-rows: 0.5fr 0.5fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 0.5rem;
+    padding: 1rem;
 }
 .c-gallery--title {
     margin: 0;
     padding: 1rem 2rem 0 2rem;
     font-size: 1.5rem;
-    color: #347f34;
+    color: #347f34; 
+    font-family: Montserrat;
 }
 .c-gallery--sub-title {
     padding: 0 2rem;
     font-size: 1rem;
     opacity: 0.6;
     color: #347f34;
+    font-family: Montserrat;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
 }
-.c-gallery--desc {
-    padding: 0 2rem;
+.c-gallery-card--section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #363636;
+    padding: 1rem;
+}
+.c-gallery-card--section--icon {
+    margin-right: 1rem;
+    padding: 0.5rem 0.5rem;
+    display: flex;
+    outline: 10px double rgba(230, 18, 106, 0.1);
+    outline-offset: 2px;
     font-size: 1rem;
-    color: #454545;
+    border-radius: 50%;
+    background: linear-gradient(#f9566a, #e6126a);
+}
+.c-gallery-card--section__heading {
+    margin: 0;
+    font-size: 1rem;
 }
 .c-gallery__img {
     grid-row: auto/span 1;
     grid-column: auto/span 1;
     overflow: hidden; 
+}
+.c-gallery__img:first-child {
+    grid-row: auto/span 2;
+    grid-column: auto/span 2;
+}
+.c-gallery__img:nth-child(2) {
+    grid-column: auto/span 2;
 }
 
 .c-gallery__img:hover {
@@ -132,7 +179,7 @@ body, html{
 
 .c-gallery__img img {
     border-radius: 1rem;
-    object-fit: scale-down;
+    object-fit: cover;
     height: 100%;
     width: 100%;
 }
