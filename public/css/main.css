@@ -14,6 +14,7 @@ body, html{
     width: 100%;
     min-height: 10rem;
     background-image: url('https://www.freewebheaders.com/wp-content/uploads/colorful-modern-artistic-abstract-vector-hero-header-1920x1080-e1561055870332.jpg');
+    background-size: cover;
 }
 
 .c-hero__grid {
